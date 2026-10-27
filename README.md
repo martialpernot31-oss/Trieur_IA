@@ -1,0 +1,107 @@
+📖 Guide d'Utilisation — Trieur IA Pro
+
+🌟 C'est quoi Trieur IA Pro ?
+
+Trieur IA Pro est votre assistant personnel pour organiser automatiquement votre ordinateur. Il surveille votre dossier de vrac (comme vos Téléchargements), lit vos documents (PDF, images, documents Word, archives .zip, etc.), comprend leur contenu grâce à l'intelligence artificielle ou à des règles locales, les renomme proprement et les classe dans les bons sous-dossiers.
+
+⚙️ Étape 1 : Les réglages initiaux (Onglet « ⚙️ Paramètres »)
+
+Comme l'application est 100 % portable, aucun installateur n'est requis. Lancez simplement Trieur_IA.exe puis rendez-vous dans l'onglet ⚙️ Paramètres :
+
+Fournisseur d'IA & Clé API : Sélectionnez votre fournisseur (Google Gemini, OpenAI, Claude, Mistral AI ou Mamouth IA) et collez votre clé API. Cliquez sur Actualiser Modèles pour choisir le modèle souhaité. (Votre clé est stockée de manière sécurisée dans le coffre-fort de Windows).
+
+Dossiers Source & Rangement :
+
+Dossier Source : Le dossier à surveiller (ex. Téléchargements).
+
+Dossier de Rangement : Le dossier racine où vos fichiers seront organisés (ex. Documents).
+
+Catégories autorisées : Personnalisez vos catégories séparées par des virgules (Identité, Impôts, Juridique, Banque, Factures, Assurances, Santé, Emploi, Logement, Véhicule...).
+
+Règles locales (Tri instantané sans IA) : Définissez des correspondances rapides sous la forme mot-clé : Catégorie (ex. edf: Factures, ameli: Santé, loyer: Logement). Les fichiers correspondants sont classés immédiatement sans consommer de requêtes API.
+
+Classement chronologique automatique : Cochez cette option pour organiser automatiquement vos sous-dossiers par date (Catégorie / Année / Mois — ex. Factures/2026/03_Mars/).
+
+Extensions à ignorer : Indiquez les extensions à exclure du tri (les fichiers exécutables et l'ensemble des formats vidéo .mp4, .mkv, .avi, etc. sont déjà intégrés par défaut).
+
+Cliquez sur Enregistrer la Configuration.
+
+🚀 Étape 2 : Utiliser le trieur au quotidien (Onglet « 🏠 Tableau de bord »)
+
+Vous disposez de trois modes de tri complémentaires :
+
+Le mode Surveillance automatique (Recommandé) :
+
+Cliquez sur DÉMARRER LA SURVEILLANCE. Le badge passe au vert (🟢 ● SURVEILLANCE ACTIVE). Dès qu'un nouveau fichier arrive dans votre dossier Source, il est analysé, renommé et rangé en temps réel.
+
+Le Glisser Déposer direct (Drag & Drop) :
+
+Glissez déposez un ou plusieurs fichiers depuis l'explorateur Windows directement n'importe où sur la fenêtre de l'application. Le tri s'exécute immédiatement.
+
+L'importation ou le tri manuel :
+
+Cliquez sur Trier maintenant pour nettoyer d'un coup l'ensemble des fichiers déjà présents dans le dossier Source.
+
+Cliquez sur 📥 Importer des fichiers pour sélectionner spécifiquement quelques documents sur votre disque à trier à la volée.
+
+💡 Les fonctionnalités intelligentes
+
+Détection automatique des doublons (Hachage SHA-256) : Avant de déplacer un document, le logiciel compare sa taille et son empreinte numérique unique. Si un fichier strictement identique existe déjà dans le dossier de destination, il est automatiquement isolé dans un dossier dédié Doublons.
+
+Analyse des archives .zip : Le logiciel inspecte la liste des fichiers contenus à l'intérieur des archives .zip pour déterminer la catégorie appropriée sans nécessiter de décompression préalable.
+
+Validation des nouvelles catégories : Si l'IA suggère une catégorie qui n'est pas encore dans votre liste, une fenêtre vous demande confirmation. Si vous refusez, le fichier est classé dans Autres_Fichiers et l'application retient votre choix.
+
+Historique et Annulation en un clic (Onglet « 📜 Historique ») : Chaque déplacement apparaît dans le tableau de l'onglet Historique. En cas d'erreur de classement, sélectionnez la ligne concernée et cliquez sur ↩️ Annuler le déplacement sélectionné : le fichier retourne immédiatement à son emplacement et nom d'origine.
+
+Mode discret (Zone de notification) : Cliquez sur Mode Discret. L'application se masque dans la barre des tâches (près de l'heure Windows) tout en continuant de surveiller vos dossiers en arrière-plan. Un double-clic sur son icône restaure la fenêtre.
+
+📂 Récapitulatif des Formats de Fichiers Pris en Charge
+
+Le moteur analyse et prend en charge une grande variété de formats répartis par catégories :
+
+Documents PDF & Bureautique Moderne :
+
+PDF (.pdf)
+
+Word (.docx, .docm, .dotx)
+
+Tableurs et Présentations (.xlsx, .xlsm, .xltx, .pptx, .pptm, .ppsx, .odt, .ods, .odp, .odg)
+
+
+Anciens Formats & E-mails :
+
+Anciens formats Office (.doc, .xls, .ppt, .dot, .xlt, .pot)
+
+E-mails et messages (.eml, .msg)
+
+Suite Apple iWork (.pages, .numbers, .key)
+
+
+Texte, Code Source & Données Structurées :
+
+Documents texte et notes (.txt, .md, .markdown, .rst, .rtf, .tex, .asciidoc, .adoc, .svg, .djvu, .xps, .log, .srt, .vtt, .sub, .ass, .ics, .vcf)
+
+Données et web (.csv, .tsv, .json, .jsonl, .geojson, .xml, .html, .htm, .xhtml, .yaml, .yml, .toml, .ini, .cfg, .conf, .env, .properties)
+
+Code source (.py, .rs, .js, .ts, .jsx, .tsx, .c, .cpp, .h, .hpp, .cs, .java, .php, .rb, .sh, .bash, .zsh, .bat, .ps1, .lua, .go, .kt, .swift, .sql)
+
+
+Images, Photos & Multimédia :
+
+Images standard (.jpg, .jpeg, .png, .bmp, .tif, .tiff, .webp, .gif)
+
+Formats mobiles et RAW (.heic, .heif, .cr2, .nef, .arw, .dng, .raf, .orf, .rw2, .pef)
+
+Audio (avec transcription Whisper : .mp3, .wav, .flac, .m4a, .aac, .ogg, .oga, .wma, .opus, .aiff, .mpga, .webm, .amr, .mka, .m4b, .weba)
+
+Vidéos (.mp4, .mkv, .mov, .avi, .webm, .flv, .wmv, .m4v, .mpg, .mpeg, .3gp, .vob, .mts, .m2ts)
+
+
+Archives, Livres & Divers :
+
+Archives compressées (.zip, .7z, .rar, .tar, .gz, .bz2, .xz, .tgz, .iso, .cab, .zst)
+
+Livres numériques (.epub, .mobi, .azw3)
+
+Fichiers torrent (.torrent)
